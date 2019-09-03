@@ -1,10 +1,16 @@
 {
     "target_overrides": {
 	"MCU_NRF52840": {
-            "target.features_add": ["STORAGE"],
+            
 	    "target.features_remove": ["CRYPTOCELL310"],
 	    "target.macros_remove": ["MBEDTLS_CONFIG_HW_SUPPORT"],
             "target.components_add": ["QSPIF", "FLASHIAP"]
-	}
+    },
+    "NUCLEO_F429ZI": {
+        "target.features_add": ["STORAGE"],
+        "target.components_add": ["DATAFLASH", "FLASHIAP"],
+        "target.features_remove": ["CRYPTOCELL310"],
+	    "target.macros_remove": ["MBEDTLS_CONFIG_HW_SUPPORT"]
+    }
     }
 }
